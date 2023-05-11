@@ -1,0 +1,174 @@
+﻿<Window x:Class="ACADtoSQL.StylesAndDImsUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        Title="Styles And Dim" Height="375" Width="755.734">
+    <Window.Resources>
+        <!-- Style controls dynamic nature of textblocks to fit the data pulled from excel -->
+        <Style x:Key="DynamicTB"  TargetType="TextBox" >
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="TextWrapping" Value="NoWrap" />
+            <Setter Property="Height" Value="16" />            
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Width" Value="200" />
+                    <Setter Property="TextWrapping" Value="Wrap"/>
+                    <Setter Property="Height"   Value="Auto"/>
+                    <Setter Property="Panel.ZIndex" Value="999"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+    </Window.Resources>
+    <Grid Margin="0,0,-8,-6" >        
+                
+        <TextBox x:Name="StyleId" HorizontalAlignment="Left" Height="23" Margin="185,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189" x:FieldModifier="public"/>
+        
+        <!--Column 1 -->
+        <TextBox x:Name="TB_Overall_Width" Style="{StaticResource DynamicTB}" HorizontalAlignment="Left" Margin="13,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public"></TextBox>
+        <Label x:Name="Label_Overall_Width" Content="Overall Width" HorizontalAlignment="Left" Height="16" Margin="68,46,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Overall_Depth" Style="{StaticResource DynamicTB}" HorizontalAlignment="Left" Margin="13,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961"  x:FieldModifier="public"></TextBox>
+        <Label x:Name="Label_Overall_Depth" Content="Overall Depth" HorizontalAlignment="Left" Height="16" Margin="68,66,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Overall_Height" Style="{StaticResource DynamicTB}" HorizontalAlignment="Left" Margin="13,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public"></TextBox>
+        <Label x:Name="Label_Overall_Height" Content="Overall Height" HorizontalAlignment="Left" Height="16" Margin="68,86,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Height_to_Frame" Style="{StaticResource DynamicTB}" HorizontalAlignment="Left" Margin="13,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Height_to_Frame" Content="Height to Frame" HorizontalAlignment="Left" Height="16" Margin="68,106,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Arm_Height" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}"  Margin="13,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Arm_Height" Content="Arm Height" HorizontalAlignment="Left" Height="16" Margin="68,126,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Seat_Height_Seam" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="13,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Seat_Height_Seam" Content="Seat Height to Seam" HorizontalAlignment="Left" Height="16" Margin="68,146,0,0" VerticalAlignment="Top" Width="80" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Seat_Height_Crown" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="13,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Seat_Height_Crown" Content="Seat Height Crown" HorizontalAlignment="Left" Height="16" Margin="68,166,0,0" VerticalAlignment="Top" Width="73" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Seat_Width" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}"  Margin="13,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Seat_Width" Content="Seat Width" HorizontalAlignment="Left" Height="16" Margin="68,186,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Seat_Depth" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}"  Margin="13,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Seat_Depth" Content="Seat Depth" HorizontalAlignment="Left" Height="16" Margin="68,206,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Arm_Width" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="13,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Arm_Width" Content="Arm Width" HorizontalAlignment="Left" Height="16" Margin="68,226,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Diagonal" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="13,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Diagonal" Content="Diagonal" HorizontalAlignment="Left" Height="16" Margin="68,246,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Back_Height" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="13,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Back_Height" Content="Back Height" HorizontalAlignment="Left" Height="16" Margin="68,266,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_UnCartoned_Weight" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}"  Margin="13,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_UnCartoned_Weight" Content="UnCartoned Weight" HorizontalAlignment="Left" Height="16" Margin="68,286,0,0" VerticalAlignment="Top" Width="80" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <!--Column 2 -->
+        <TextBox x:Name="TB_OSB_Pitch" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_OSB_Pitch" Content="OSB Pitch" HorizontalAlignment="Left" Height="16" Margin="268,46,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_ISB_Pitch" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_ISB_Pitch" Content="ISB Pitch" HorizontalAlignment="Left" Height="16" Margin="268,66,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Cartoned_Width" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public"></TextBox>
+        <Label x:Name="Label_Cartoned_Width" Content="Cartoned Width" HorizontalAlignment="Left" Height="16" Margin="268,86,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Cartoned_Depth" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Cartoned_Depth" Content="Cartoned Depth" HorizontalAlignment="Left" Height="16" Margin="268,106,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Cartoned_Height" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Cartoned_Height" Content="Cartoned Height" HorizontalAlignment="Left" Height="16" Margin="268,126,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Cartoned_Weight" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Cartoned_Weight" Content="Cartoned Weight" HorizontalAlignment="Left" Height="16" Margin="268,146,0,0" VerticalAlignment="Top" Width="80" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Accent_Pillows" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Accent_Pillows" Content="Accent Pillows" HorizontalAlignment="Left" Height="16" Margin="268,166,0,0" VerticalAlignment="Top" Width="73" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Pillow_Type" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Pillow_Type" Content="Pillow Type" HorizontalAlignment="Left" Height="16" Margin="268,186,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Back_Cushions" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Back_Cushions" Content="Back Cushions" HorizontalAlignment="Left" Height="16" Margin="268,206,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Posts_Attached_in_Shipping" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}"  Margin="213,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Posts_Attached_in_Shipping" Content="Posts Attached in Shipping" HorizontalAlignment="Left" Height="16" Margin="268,226,0,0" VerticalAlignment="Top" Width="106" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Posts_Removable" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="213,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Posts_Removable" Content="Posts Removable" HorizontalAlignment="Left" Height="16" Margin="268,246,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        
+
+        <!--Column 3 -->
+        <TextBox x:Name="TB_Mattress_Opening_Width" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Mattress_Opening_Width" Content="Mattress Opening Width" HorizontalAlignment="Left" Height="16" Margin="468,46,0,0" VerticalAlignment="Top" Width="89" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Mattress_Opening_Depth" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Mattress_Opening_Depth" Content="Mattress Opening Depth" HorizontalAlignment="Left" Height="16" Margin="468,66,0,0" VerticalAlignment="Top" Width="96" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_SideRail_Width" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public"></TextBox>
+        <Label x:Name="Label_SideRail_Width" Content="SideRail Width" HorizontalAlignment="Left" Height="16" Margin="468,86,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_SideRail_Depth" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961"  x:FieldModifier="public"></TextBox>
+        <Label x:Name="Label_SideRail_Depth" Content="SideRail Depth" HorizontalAlignment="Left" Height="16" Margin="468,106,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_SideRail_Height" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_SideRail_Height" Content="SideRail Height" HorizontalAlignment="Left" Height="16" Margin="468,126,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Height_to_Slats_Bot" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Height_to_Slats_Bot" Content="Height to Bottom of Slats" HorizontalAlignment="Left" Height="16" Margin="468,146,0,0" VerticalAlignment="Top" Width="96" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_Height_to_SideRail_Bot" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}"  Margin="413,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_Height_to_SideRail_Bot" Content="Height to Bottom of SideRail" HorizontalAlignment="Left" Height="16" Margin="468,166,0,0" VerticalAlignment="Top" Width="107" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_UnderBed_Opening_Width" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_UnderBed_Opening_Width" Content="UnderBed Opening Width" HorizontalAlignment="Left" Height="16" Margin="468,186,0,0" VerticalAlignment="Top" Width="96" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <TextBox x:Name="TB_UnderBed_Opening_Depth" HorizontalAlignment="Left" Style="{StaticResource DynamicTB}" Margin="413,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" ></TextBox>
+        <Label x:Name="Label_UnderBed_Opening_Depth" Content="UnderBed Opening Depth" HorizontalAlignment="Left" Height="16" Margin="468,206,0,0" VerticalAlignment="Top" Width="96" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+
+        <!--Comment -->
+        <TextBox x:Name="TB_Comment" HorizontalAlignment="Left" Height="40" Margin="167,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" />
+        <Label x:Name="Label_Comment" Content="Comment:" HorizontalAlignment="Left" Height="16" Margin="167,273,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+        <TextBox x:Name="TB_Date" HorizontalAlignment="Left" Height="16" Margin="339,291,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" />
+        <Label x:Name="Label_Date" Content="Date" HorizontalAlignment="Left" Height="16" Margin="394,291,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+        <TextBox x:Name="TB_Initials" HorizontalAlignment="Left" Height="16" Margin="339,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" />
+        <Label x:Name="Label_Initials" Content="Initials" HorizontalAlignment="Left" Height="16" Margin="394,312,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+        
+        <!--Revision|Creation -->
+        <TextBox x:Name="TB_Revision" HorizontalAlignment="Left" Height="40" Margin="431,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" />
+        <Label x:Name="Label_Revision" Content="Revision Note:" HorizontalAlignment="Left" Height="16" Margin="431,273,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+        <TextBox x:Name="TB_Rev_Date" HorizontalAlignment="Left" Height="16" Margin="603,291,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.487,1.961" x:FieldModifier="public" />
+        <Label x:Name="Label_Rev_Date" Content="Date" HorizontalAlignment="Left" Height="16" Margin="658,291,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+        <TextBox x:Name="TB_Rev_Intials" HorizontalAlignment="Left" Height="16" Margin="603,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.487,1.961"  x:FieldModifier="public"/>
+        <Label x:Name="Label_Rev_Intials" Content="Initials" HorizontalAlignment="Left" Height="16" Margin="658,312,0,0" VerticalAlignment="Top" Width="66" FontSize="8" RenderTransformOrigin="0.509,-0.275" Padding="2" />
+        
+        <!--Submit data -->
+        <Button x:Name="Verify" Content="Send" HorizontalAlignment="Left" Height="24" Margin="413,10,0,0" VerticalAlignment="Top" Width="58" Click="Verify_Click"/>
+
+        <!--Status of Data -->
+        <ItemsControl Name="displayList" Width="146" Height="196"  Margin="578,46,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="2" FontSize="8">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Label x:Name="Label_Status"  RenderTransformOrigin="0.509,-0.275" Content="{Binding}" >
+                        <!--<Label.Style>
+                            <Style TargetType="Label">--><!--needs a more data here, like convent, value, x:key--><!--
+                                <Setter Property="Content" Value="{Binding}" >
+                                    <Style.Triggers>
+                                        <EventTrigger RoutedEvent="TB_Overall_Width.MouseEnter">
+                                            <Condition Binding="{Binding ElementName=TB_Overall_Width}" Content=TB_Overall_Width.Text>
+                                                
+                                            </Condition>
+                                        </EventTrigger>
+                                    </Style.Triggers>
+                                </Setter>                                
+                            </Style>
+                        </Label.Style>-->
+                    </Label>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+
+    </Grid>
+</Window>
