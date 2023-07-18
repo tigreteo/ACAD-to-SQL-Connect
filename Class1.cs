@@ -76,14 +76,14 @@ namespace ACADtoSQL
             {
                 if (pkeyRes.StringResult.ToUpper() == "ALL")
                 {
-                    searchFolder = @"Y:\Product Development\Style Specifications";
+                    searchFolder = @"DRIVE LOC:\Product Development\Style Specifications";
                     //dig through folder for dwgs
                     fileNames = LINQ(searchFolder);
                 }
                 else if (pkeyRes.StringResult.ToUpper() == "SPECIFIC")
                 {
                     FolderBrowserDialog folder = new FolderBrowserDialog();
-                    folder.SelectedPath = @"Y:\Product Development\Style Specifications";
+                    folder.SelectedPath = @"DRIVE LOC:\Product Development\Style Specifications";
                     folder.RootFolder = Environment.SpecialFolder.Desktop;
 
                     if (folder.ShowDialog() == DialogResult.OK)
